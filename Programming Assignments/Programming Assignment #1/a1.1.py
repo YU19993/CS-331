@@ -173,5 +173,8 @@ def bfs(initState):
         for x in states[0]:
             print(x)
         print("Expend: ", expend)
+        for x in states[0]:
+            file.write(str(x) + "\n")
+        file.close()
 
 bfs(initState)

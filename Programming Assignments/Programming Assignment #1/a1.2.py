@@ -175,6 +175,9 @@ def dfs(initState):
         for x in states[len(states)-1]:
             print(x)
         print("Expend: ", expend)
+        for x in states[len(states)-1]:
+            file.write(str(x) + "\n")
+        file.close()
 
 
 dfs(initState)

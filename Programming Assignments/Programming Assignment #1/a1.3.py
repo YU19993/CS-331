@@ -188,6 +188,12 @@ def iddfs(initState):
         for x in states[len(states)-1]:
             print(x)
         print("Expend: ", expend)
+        file = open("result.txt", "w")
+
+        for x in states[len(states)-1]:
+            file.write(str(x) + "\n")
+
+        file.close()
 
 
 iddfs(initState)
