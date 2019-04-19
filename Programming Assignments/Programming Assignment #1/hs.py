@@ -3,17 +3,7 @@ import numpy as np
 import csv
 from fs import *
 
-initState = []
-
-#validate command argument, should include file name qand search type
-if(len(sys.argv)!=3):
-    print("Please Data File or Search Type\n")
-    sys.exit(0)
-
-#read and pare initinal
-initState = getInitState(sys.argv[1])
-
-def bfs(initState):
+def hs(initState):
         expend = 0
         states = []
         states.append([])
@@ -170,12 +160,7 @@ def bfs(initState):
                                         states.append(st)
                                         expend = expend + 1
                                         #print(states)
-        for x in states[0]:
-            print(x)
-        print("Expend: ", expend)
-        file = open("result.txt", "w")
-        for x in states[0]:
-            file.write(str(x) + "\n")
-        file.close()
-
-bfs(initState)
+        if(len(states) > 0):
+                return int(len(states[0])-1)
+        else:
+                return int(-1)
