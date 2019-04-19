@@ -3,7 +3,7 @@ import numpy as np
 import csv
 from fs import *
 
-def h(initState):
+def bfs(initState, out):
         expend = 0
         states = []
         states.append([])
@@ -94,6 +94,7 @@ def h(initState):
                                         #print(states)
 
                 else:
+                        #print("In Right: ", currentState[current], " \n")
                         #send one wolve
                         if(currentState[current][4] >= 1):
                             #    print("21\n")
@@ -171,7 +172,10 @@ def h(initState):
                                         states.append(st)
                                         expend = expend + 1
                                         #print(states)
-        if(len(states) > 0):
-                return int(len(states[0])-1)
-        else:
-                return int(-1)
+        for x in states[0]:
+            print(x)
+        print("Expend: ", expend)
+        file = open(out, "w")
+        for x in states[0]:
+            file.write(str(x) + "\n")
+        file.close()
