@@ -17,8 +17,8 @@ def iddfs(initState):
         states = []
         f = False
         limit = 1
+        expend = 0
         while f == False:
-                expend = 0
                 print("Limit: ", limit)
                 states = []
                 states.append([])

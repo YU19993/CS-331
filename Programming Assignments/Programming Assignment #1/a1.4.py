@@ -196,7 +196,7 @@ def astart(initState):
                                                         bestValue = hs(t)
                 if(bestValue != -1):
                         st = cll(currentState)
-                        st.append(t)
+                        st.append(bestNode)
                         states.append(st)
                         expend = expend + 1
         for x in states[0]:
