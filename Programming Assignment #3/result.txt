@@ -1,0 +1,4 @@
+In training set, there is 499 examples and there are 24that is incorrect
+In the training set, the accuracy is 0.9519038076152304.
+In testing set, there is 497 examples and there are 102that is incorrect
+In the testing set, the accuracy is 0.7947686116700201.
